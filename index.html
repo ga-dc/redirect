@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head></head>
+  <body>
+<script id='links' type='text/links'>
+
+x,https://github.com/ga-wdi-exercises
+l,https://github.com/ga-wdi-lessons
+
+</script>
+<script>
+var hash = location.hash.substr(2)
+var obj = {}
+links.innerHTML.split("\n").filter(function(_){ return _}).forEach(function(line){
+  var ls = line.split(/,(.+)?/)
+  obj[ls[0]] = ls[1]
+})
+if( !obj[hash] ){
+  document.write('not found')
+} else {
+  window.location = obj[hash]
+}
+</script>
+  </body>
+</html>
